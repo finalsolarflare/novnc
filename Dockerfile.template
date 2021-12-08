@@ -1,4 +1,4 @@
-FROM {{base_image}}
+FROM alpine:3.14
 
 ENV VNC_PORT=5900 \
     NOVNC_PORT=6080 \
