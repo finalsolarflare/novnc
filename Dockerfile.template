@@ -13,4 +13,4 @@ RUN apk update && apk add --no-cache git python2 procps && \
 EXPOSE $NOVNC_PORT
 
 #CMD HOST_IP=$(eval $GET_HOST); $NOVNC_HOME/utils/launch.sh --vnc $HOST_IP:$VNC_PORT
-$NOVNC_HOME/utils/launch.sh --vnc localhost:$VNC_PORT
+CMD $NOVNC_HOME/utils/novnc_proxy --vnc localhost:$VNC_PORT
